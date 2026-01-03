@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP32-CAM Live Stream</title>
+    <style>
+        body { font-family: Arial; text-align:center; }
+        img { border: 2px solid #333; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>ESP32-CAM Live Stream</h1>
+    <img id="cameraStream" width="320" height="240"/>
+    <script>
+        function updateFrame() {
+            const now = new Date().getTime();
+            document.getElementById("cameraStream").src = "/uploads/latest.jpg?" + now;
+        }
+        setInterval(updateFrame, 200); // refresh every 200ms
+    </script>
+</body>
+</html>
