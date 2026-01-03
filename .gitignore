@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# ESP32 Build
+*.bin
+*.elf
+*.map
+
+# Upload folder
+server/uploads/*
